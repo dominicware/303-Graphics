@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>303 Graphics</title> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 90%;
+            margin: 0 auto
+        }
+        .navbar {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            overflow: hidden;
+            height: 40px;
+            line-height: 40px;
+            background: 255,255,255,.5;
+            padding-top: 2%;
+        }
+        .logo_div{
+            width: 80px;
+            float:left;
+        }
+
+        .logo_div a{
+            color: #000;
+            text-decoration: none;
+            font-family: "Bebas Neue";
+            display:block;
+            font-size: 30px;
+        }
+
+        /* this is for ul tag */
+        .menu{
+            float:right;
+        }
+        .menu li{
+            float:left;
+            width:120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            list-style: none;
+        }
+        .menu li a{
+            color: #000;
+            text-decoration: none;
+            font-family: "Bebas Neue";
+            font-size: 30px;
+            text-transform: uppercase;
+            display:block;
+        }
+        .menu li a:hover{
+            color: red
+        }
+        #myVideo {
+            width: 100%; 
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>  
+    <div class="navbar">
+        <div class="container">
+          <div class="logo_div">
+            <a href="#">303graphics</a>
+          </div>
+          <div class="navbar_links">
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="about.html">About us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <video playsinline autoplay muted loop poster="TheGuide.jpg" id="myVideo">
+        <source src="303 Graphics.mp4" type="video/mp4">
+      </video>
+      <div class="bodytext">
+        <p>
+            dfkjeKJFNkdjfnkejnfkajfkjasdfkjbw kasjnfajsnfsalfs
+            aslfjnasjfnkfjnj
+        </p>
+      </div>
+<footer>Footer</footer>
+</body>
+</html>
