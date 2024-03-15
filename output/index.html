@@ -6,69 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleSheet.css">
     <title>303 Graphics</title> 
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .container{
-            width: 90%;
-            margin: 0 auto
-        }
-        .navbar {
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width:100%;
-            overflow: hidden;
-            height: 40px;
-            line-height: 40px;
-            background: 255,255,255,.5;
-            padding-top: 2%;
-        }
-        .logo_div{
-            width: 80px;
-            float:left;
-        }
-
-        .logo_div a{
-            color: #000;
-            text-decoration: none;
-            font-family: "Bebas Neue";
-            display:block;
-            font-size: 30px;
-        }
-
-        /* this is for ul tag */
-        .menu{
-            float:right;
-        }
-        .menu li{
-            float:left;
-            width:120px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            list-style: none;
-        }
-        .menu li a{
-            color: #000;
-            text-decoration: none;
-            font-family: "Bebas Neue";
-            font-size: 30px;
-            text-transform: uppercase;
-            display:block;
-        }
-        .menu li a:hover{
-            color: red
-        }
-        #myVideo {
-            width: 100%; 
-            min-height: 100%;
-        }
-    </style>
 </head>
 <body>  
     <div class="navbar">
@@ -89,12 +28,36 @@
       <video playsinline autoplay muted loop poster="TheGuide.jpg" id="myVideo">
         <source src="303 Graphics.mp4" type="video/mp4">
       </video>
-      <div class="bodytext">
-        <p>
-            dfkjeKJFNkdjfnkejnfkajfkjasdfkjbw kasjnfajsnfsalfs
-            aslfjnasjfnkfjnj
-        </p>
-      </div>
-<footer>Footer</footer>
+      <main>
+        <div class="grid-container" style="font-family: Bebas Neue;">
+          <div class="grid-item" style="background-color: black; color: white; margin-top: 10px;">
+            <h2 class="sub-heading" style="float: left;">Quality in Motion.</h2>
+          </div>
+          <div class="grid-item" style="margin-top: 10px; text-align: left;">
+            <p style="font-size: 20px;">
+              Twenty years experience in creating graphics and animation for a 
+              wide variety of media including title sequences, live events,
+              product launches, awards ceremonies, corporate video and more.
+            </p>
+            <br>
+            <h3 style="font-size: 30px; text-align: right;"><a href="mailto:paul@303graphics.com" style="text-decoration: none; color: black;">paul@303graphics.com</a></h3>
+          </div>
+        </div>
+        <br>
+        <br>
+      </main>
+<footer class="footer">
+    <div class="footer_navbar">
+        <div class="footer_navbar_links">
+            <ul class="footer_menu">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">303 Graphics©2024</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
