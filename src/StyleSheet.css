@@ -6,54 +6,125 @@
     width: 90%;
     margin: 0 auto
 }
-.navbar {
+
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
+    --white: #f9f9f9;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.header{
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    width:100%;
-    overflow: hidden;
-    height: 40px;
-    line-height: 40px;
     background: 255,255,255,.5;
-    padding-top: 2%;
-}
-.logo_div{
-    width: 80px;
-    float:left;
+    width: 100%;
+    height: 150px;
 }
 
-.logo_div a{
-    color: #000;
-    text-decoration: none;
-    font-family: "Bebas Neue";
-    display:block;
-    font-size: 40px;
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: black;
+    overflow: hidden;
 }
 
-/* this is for ul tag */
-.menu{
-    float:right;
+.title{
+    color: white;
+    text-align: left;
+    font-family: Bebas Neue;
+    font-size: 30px;
+    padding: 14px;
 }
-.menu li{
-    float:left;
-    width:120px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    list-style: none;
+
+.menu a{
+    display: block;
+    padding: 12px;
+    color: var(--white);
+    font-family: Bebas Neue;
+    font-size: 20px;
+    text-align: right;
 }
-.menu li a{
-    color: #000;
-    text-decoration: none;
-    font-family: "Bebas Neue";
-    font-size: 40px;
-    text-transform: uppercase;
-    display:block;
+.menu a:hover{
+    background-color: #110f39;
 }
-.menu li a:hover{
-    color: red
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
 }
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 30px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
 #myVideo {
     width: 100%; 
     min-height: 100%;
@@ -125,4 +196,36 @@
 .grid-item {
   width: 49vw;
 }
+
+.nav{
+    max-height: none;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    background: 255,255,255,.5;
+}
+
+.main-body-text {
+    width: 66%;
+}
+
+.menu li{
+    float: right;
+}
+
+.menu a{
+    font-size: 30px;
+    padding: 14px;
+}
+
+.menu a:hover{
+    background-color: transparent;
+    color: red;
+}
+
+.hamb{
+    display: none;
+}
+
 }
